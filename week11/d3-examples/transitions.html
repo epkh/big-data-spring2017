@@ -32,5 +32,38 @@
 		.attr("height", 50);
 
 	// Transitions code will go here
+	// Set up the reset button to move it back to 50,50
+	d3.select("#reset").on("click", function() {
+		rectangle
+			.transition()
+			.attr("x", 50)
+			.attr("y", 50)
+			.attr("fill", "black");
+	});
+
+	d3.select("#start").on("click", function() {
+		rectangle
+			.transition() // ALL OF OUR TRANSITIONS WILL GO HERE!
+			.attr("x", 250) // Set New Position
+			.attr("width", 100) // New Width
+			.attr("height", 100) // New Height
+			.attr("opacity", 0.5) // New Opacity
+			.attr("fill", "red") // New Color (Hex, RGB, or Web Safe)
+			.delay(500) // Delay 500ms (0.5 seconds)
+			.duration(2500) // Set Duration of 5000ms (5 seconds)
+			.ease(d3.easeBounce) // Use the Bounce Transition Ease
+			.on("end",function() { // on end of transition...
+			    d3.select(this)
+			    	.transition() // second transition
+						.attr("x", 150) // second x
+						.attr("width", 75) // second width
+						.attr("height", 75) // second height
+						.attr("opacity", 0.75) // second opacity
+						.attr("fill", "blue") // second color
+						.delay(500) // second delay
+						.duration(2500) // second time
+						.ease(d3.easeBounce); // second ease
+			});
+	});
 </script>
 </html>
