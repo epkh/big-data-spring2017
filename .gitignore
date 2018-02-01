@@ -1,14 +1,2 @@
-
-week3/.ipynb_checkpoints/02. Pandas Introduction-checkpoint.ipynb
-
-week3/.ipynb_checkpoints/PSET_2_Pandas_Holtzman-checkpoint.ipynb
-
-week4/.ipynb_checkpoints/PSET_3_Scraping_Holtzman-checkpoint.ipynb
-
-week4/.ipynb_checkpoints/03_API_Data_Scraping-checkpoint.ipynb
-
-week4/__pycache__/twitter_key_LOCAL.cpython-36.pyc
-
-week4/twitter_key_LOCAL.py
-
-week4/twitter_key.py
+**/.DS_Store
+**/.ipynb_checkpoints/*
